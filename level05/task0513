@@ -1,0 +1,49 @@
+package com.javarush.task.task05.task0513;
+
+/*
+Собираем прямоугольник
+*/
+
+public class Rectangle {
+    //напишите тут ваш код
+    int top = 1;
+    int left = 1;
+    int width = 1;
+    int height = 1;
+
+
+    public void initialize(int top)
+    {
+        this.top = top;
+        this.height = 2;
+        this.left = 4;
+        this.width = width;
+    }
+
+    public void initialize(int top, int width)
+    {
+        this.top = top;
+        this.height = 2;
+        this.left = 4;
+        this.width = width;
+    }
+
+    public void initialize(int top, int width, int height)
+    {
+        this.top = top;
+        this.height = height;
+        this.left = 4;
+        this.width = width;
+    }
+
+    public void initialize(int left, int top, int width, int height)
+    {
+        this.top = 2;
+        this.height = 2;
+        this.left = left;
+        this.width = 5;
+    }
+    public static void main(String[] args) {
+
+    }
+}
