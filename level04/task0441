@@ -1,0 +1,33 @@
+package com.javarush.task.task04.task0441;
+
+
+/*
+Как-то средненько
+*/
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int massiv[] = new int[3];
+        for (int ch = 0; ch < massiv.length; ch++) { //Ввожу с клавиатуры 3 числа и передаю их в массив.
+            massiv[ch] = Integer.parseInt(reader.readLine());
+        }
+
+
+        for (int i = massiv.length-1; i>0; i--){     //сортировка пузырьком
+            for (int j = 0; j<i; j++){
+                if (massiv[j] < massiv[j+1]){
+                    int tmp = massiv[j];
+                    massiv[j] = massiv[j+1];
+                    massiv[j+1] = tmp;
+                }
+            }
+        }
+
+        System.out.println(massiv[1]);
+
+
+    }
+}

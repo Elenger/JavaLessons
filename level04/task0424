@@ -1,0 +1,28 @@
+package com.javarush.task.task04.task0424;
+
+/*
+Три числа
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        int massiv[] = new int[3];
+        for (int ch = 0; ch < massiv.length; ch++) { //Ввожу с клавиатуры 3 числа и передаю их в массив.
+            massiv[ch] = Integer.parseInt(reader.readLine());
+        }
+
+
+        if (massiv[0] != massiv[1] && massiv[1] == massiv[2]) {
+            System.out.println(1);
+        } else if (massiv[1] != massiv[0] && massiv[0] == massiv[2]) {
+            System.out.println(2);
+        } else if (massiv[2] != massiv[1] && massiv[1] == massiv[0]) {
+            System.out.println(3);
+        }
+    }
+}

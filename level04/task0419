@@ -1,0 +1,39 @@
+package com.javarush.task.task04.task0419;
+
+/*
+Максимум четырех чисел
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String sone = reader.readLine();
+        String stwo = reader.readLine();
+        String sthree = reader.readLine();
+        String sfour = reader.readLine();
+        int one = Integer.parseInt(sone);
+        int two = Integer.parseInt(stwo);
+        int three = Integer.parseInt(sthree);
+        int four = Integer.parseInt(sfour);
+        int b1;
+        int b2;
+
+        if(one>two){
+            b1 = one;
+        }
+        else b1 = two;
+
+        if(three>four){
+            b2 = three;
+        }
+        else b2 = four;
+
+        if (b1>b2){
+            System.out.println(b1);
+        }
+        else System.out.println(b2);
+    }
+}

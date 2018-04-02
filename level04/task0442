@@ -1,0 +1,30 @@
+package com.javarush.task.task04.task0442;
+
+
+/*
+Суммирование
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        int y = 0;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int massiv[] = new int[30];
+        for (int ch = 0; ch < massiv.length; ch++) {
+            massiv[ch] = Integer.parseInt(reader.readLine());
+            if (massiv[ch]==-1){
+                for (int a = 0; a<ch+1; a++) {
+                    y = y+massiv[a];
+                    if (a==ch) {
+                        System.out.println(y);
+                        return;
+
+                    }
+                }
+            }
+        }
+    }
+}

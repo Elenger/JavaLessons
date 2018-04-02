@@ -1,0 +1,23 @@
+package com.javarush.task.task04.task0413;
+
+/*
+День недели
+*/
+
+import java.io.*;
+import java.nio.Buffer;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        String massiv[] = {"понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"};
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String stringday = reader.readLine();
+        int day = Integer.parseInt(stringday);
+
+        if (day>0 & day<8){
+            System.out.println(massiv[day-1]);
+        }
+        else System.out.println("такого дня недели не существует");
+    }
+}
