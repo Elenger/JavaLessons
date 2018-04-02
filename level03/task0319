@@ -1,0 +1,22 @@
+package com.javarush.task.task03.task0319;
+
+/*
+Предсказание на будущее
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        String name = reader.readLine();
+        String int1 = reader.readLine();
+        String int2 = reader.readLine();
+        int int11 = Integer.parseInt(int1);
+        int int22 = Integer.parseInt(int2);
+
+        System.out.println(name+" получает " + int11 + " через " + int22 + " лет.");
+    }
+}

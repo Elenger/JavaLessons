@@ -1,0 +1,37 @@
+package com.javarush.task.task01.task0132;
+
+/*
+Сумма цифр трехзначного числа
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+        System.out.println(sumDigitsInNumber(546));
+    }
+
+    public static int sumDigitsInNumber(int number) {
+        //напишите тут ваш код
+        int sotni = (number - number%100)/100;
+        int desyatki = (number%100 - (number - sotni*100)%10)/10;
+        int edenitsi = (number - sotni*100)%10;
+        int result = sotni + desyatki + edenitsi;
+        return result;
+    }
+}
+
+
+
+
+
+/*
+Через стринг.
+String string = String.valueOf(number); // перевожу int в String
+String one = string.substring(0, 1);        // Поочередно выделяю по символу
+String two = string.substring(1, 2);
+String three = string.substring(2, 3);
+int ione = Integer.parseInt(one);
+int itwo = Integer.parseInt(two);            // Обратно перевожу в int
+int ithree = Integer.parseInt(three);
+int summ = ione + itwo + ithree;
+return summ;
+*/
